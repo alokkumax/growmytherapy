@@ -1,56 +1,101 @@
+"use client";
+
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="bg-[var(--color-bg-main)] overflow-hidden">
-      <div className="flex flex-col lg:flex-row min-h-[85vh] lg:min-h-[90vh] justify-around items-stretch">
-        {/* Left: Image sticks to bottom of hero, arch at top only */}
-        <div className="relative order-2 lg:order-1 flex justify-around lg:justify-end items-end lg:items-end lg:pr-4 xl:pr-8 flex-shrink-0 self-end lg:self-end">
-          <div className="relative w-full max-w-[700px] lg:max-w-[1100px] h-full min-h-[550px] lg:min-h-[700px] aspect-[4/5] lg:aspect-[3/4]">
-            {/* Arch at top only - no radius on bottom */}
+    <section className="bg-[var(--color-bg-main)] pt-[150px] lg:pt-[90px] overflow-hidden">
+
+      <Container className="flex flex-col lg:grid lg:grid-cols-2 items-center min-h-[85vh] lg:min-h-[88vh]">
+
+        {/* Image */}
+        <div className="w-full flex justify-center mb-10 lg:mb-0">
+          <div
+            className="
+              relative
+              w-[68%]
+              sm:w-[55%]
+              md:w-[50%]
+              lg:w-full
+              max-w-[680px]
+              aspect-[4/5]
+            "
+          >
             <div
-              className="absolute inset-0 overflow-hidden border-x border-t border-[#d4c5e0]/60"
+              className="absolute inset-0 overflow-hidden"
               style={{ borderRadius: "50% 50% 0 0" }}
             >
-              <div
-                className="absolute -inset-4 blur-2xl opacity-40 z-0"
-                style={{
-                  background: "#d4c5e0",
-                  borderRadius: "50% 50% 0 0",
-                }}
-              />
               <Image
                 src="/images/daiga-ellaby-M2P08N9zi2k-unsplash.webp"
-                alt="Person holding bouquet of purple lilac flowers"
+                alt="Person holding bouquet"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center z-10"
                 priority
+                className="object-cover object-top"
                 unoptimized
               />
             </div>
           </div>
         </div>
 
-        {/* Right: Content */}
-        <div className="order-1 lg:order-2 flex justify-around lg:justify-start items-center py-12 lg:py-0 self-center">
-          <Container 
-            className="max-w-3xl flex flex-col items-center text-center"
-          >
-            <h1 className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] xl:text-[6rem] leading-[1.1] font-medium text-[#3d4a3d] tracking-tight mb-6">
-              Live your life in full bloom
+        {/* Content */}
+        <div className="w-full flex justify-center">
+          <div className="max-w-[620px] text-center">
+
+            <h1
+              className="
+                text-[3.1rem]
+                sm:text-[3.4rem]
+                md:text-[3.6rem]
+                lg:text-[3.8rem]
+                xl:text-[4rem]
+                leading-[1.08]
+                font-medium
+                text-[#2f3e2f]
+                mb-6
+              "
+            >
+              Live your life
+              <br />
+              in full bloom
             </h1>
-            <p className="text-lg md:text-xl text-[#5a6b5a]/90 leading-relaxed mb-10 max-w-md">
-            A mindful approach to wellness and growth.
+
+            <p
+              className="
+                text-[16px]
+                sm:text-[17px]
+                md:text-[18px]
+                text-[#3f4f3f]
+                leading-relaxed
+                mb-10
+              "
+            >
+              Therapy for Adults in Minneapolis, MN.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button href="#book">BOOK A FREE CONSULTATION</Button>
-            </div>
-          </Container>
+
+            <Button
+              href="#contact"
+              className="
+                text-[12px]
+                sm:text-[13px]
+                px-6
+                py-3
+                border
+                border-[#2f3e2f]
+                bg-transparent
+                text-[#2f3e2f]
+                hover:bg-[#2f3e2f]
+                hover:text-white
+              "
+            >
+              CONNECT WITH ME →
+            </Button>
+
+          </div>
         </div>
-      </div>
+
+      </Container>
     </section>
   );
 }

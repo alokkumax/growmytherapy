@@ -1,43 +1,103 @@
 import Image from "next/image";
 import Container from "@/components/ui/Container";
-import Button2 from "@/components/ui/Button2";
 
 export default function NotAlone() {
   return (
-    <section className="bg-[var(--color-bg-main)]">
-      <div className="grid lg:grid-cols-2 min-h-0">
-        {/* Left: Woman image */}
-        <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[500px]">
-          <Image
-            src="/images/ivana-cajina--wn1PECo5-U-unsplash.webp"
-            alt="Woman with contemplative expression"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover object-center"
-            unoptimized
-          />
+    <section className="bg-[#e5e0da]">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-[720px]">
+        {/* Image */}
+        <div
+          className="
+    relative
+    w-full
+    aspect-[4/3]
+    lg:aspect-auto
+    lg:min-h-full
+    order-1
+    overflow-hidden
+  "
+        >
+          <div className="relative w-full h-full animate-[fadeUp_0.8s_ease-out]">
+            <Image
+              src="/images/ivana-cajina--wn1PECo5-U-unsplash.webp"
+              alt="Woman with contemplative expression"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center"
+              unoptimized
+            />
+          </div>
         </div>
 
-        {/* Right: Lavender content */}
-        <div className="bg-[#b8a9c9] flex items-center justify-center lg:justify-start py-16 lg:py-24">
-          <Container className="max-w-xl">
-            <h2 className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] leading-tight font-medium text-white mb-6">
-              You, don&apos;t have to do this all alone.
-            </h2>
-            <p className="text-lg text-white/90 leading-relaxed mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla.
-            </p>
-            <p className="text-lg text-white/90 leading-relaxed mb-10">
-              Ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus interdum
-              posuere.
-            </p>
-            <Button2 href="#book" variant="light">
-              GET STARTED
-            </Button2>
-          </Container>
+        {/* Content Side */}
+        <div className="flex flex-col bg-[#b8a9c9] order-2">
+          <div className="py-20 lg:py-24 flex-1 flex items-center">
+            <Container className="max-w-[720px] w-full">
+              <h2
+                className="
+                text-[2.6rem]
+                md:text-[3.2rem]
+                lg:text-[3.6rem]
+                leading-[1.1]
+                font-medium
+                text-[#2f3e2f]
+                mb-8
+              "
+              >
+                You don’t have to do this all{" "}
+                <span className="italic">alone.</span>
+              </h2>
+
+              <p className="text-[18px] text-[#2f3e2f] mb-8">
+                If you are facing any of these, there’s hope:
+              </p>
+
+              <ul className="space-y-4 text-[17px] text-[#2f3e2f] leading-[1.8] mb-12 list-disc pl-6">
+                <li>Persistent feelings of sadness or hopelessness</li>
+                <li>Trouble focusing or making decisions</li>
+                <li>Difficulty maintaining relationships</li>
+                <li>Feeling constantly exhausted or unmotivated</li>
+                <li>A pervasive sense of being overwhelmed</li>
+              </ul>
+
+              <p className="text-[17px] text-[#2f3e2f] leading-[1.8]">
+                With empathy and guidance, we'll work together to navigate the
+                challenges life throws your way.
+              </p>
+            </Container>
+          </div>
+
+          {/* Bottom CTA Strip */}
+          <div className="border-t border-[#2f3e2f]/40">
+            <div
+              className="
+                group
+                py-8
+                cursor-pointer
+                transition-all
+                duration-500
+                ease-in-out
+                hover:bg-[#2f3e2f]
+              "
+            >
+              <div className="flex justify-center">
+                <span
+                  className="
+                    text-[14px]
+                    tracking-[0.18em]
+                    font-medium
+                    text-[#2f3e2f]
+                    transition-colors
+                    duration-500
+                    ease-in-out
+                    group-hover:text-white
+                  "
+                >
+                  GET STARTED →
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,28 +1,20 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import Container from "@/components/ui/Container";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const lastScrollY = useRef(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  const navItems = [
+    { label: "Blog", href: "#blog" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > 50) {
-        setIsScrolled(true);
-        if (currentScrollY > lastScrollY.current) {
-          setIsVisible(false); // scroll down - hide
-        } else {
-          setIsVisible(true); // scroll up - show
-        }
-      } else {
-        setIsScrolled(false);
-        setIsVisible(true); // at top - always show
-      }
-      lastScrollY.current = currentScrollY;
+      setIsAtTop(window.scrollY < 10);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -30,29 +22,86 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${isScrolled ? "bg-transparent" : "bg-[var(--color-bg-main)]"}`}
-    >
-      <Container>
-        <nav className="h-[67px] flex items-center justify-between">
-          {/* Logo */}
-          <span className="text-[38px] tracking-tight">
-            Lilac Template
-          </span>
+    <>
+      {/* Header */}
+      <header
+        className={`
+          fixed top-0 left-0 w-full z-50
+          transition-transform duration-500 ease-in-out
+          ${isAtTop || isOpen ? "translate-y-0" : "-translate-y-full"}
+        `}
+      >
+        <Container>
+          <nav className="h-[80px] flex items-center justify-between">
 
-          {/* Links */}
-          <div className="flex items-center gap-10 text-[20px] font-light">
-            <a href="#faq" className="hover:opacity-70 transition">
-              FAQ
+            {/* Burger */}
+            <button
+              onClick={() => setIsOpen(true)}
+              className={`lg:hidden flex flex-col gap-[6px] transition-opacity duration-300 ${
+                isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+              }`}
+            >
+              <span className="w-6 h-[2px] bg-[#2f3e2f]" />
+              <span className="w-6 h-[2px] bg-[#2f3e2f]" />
+            </button>
+
+            {/* Desktop Nav */}
+            <div className="hidden lg:flex items-center gap-12 text-[18px] font-light text-[#2f3e2f]">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="hover:opacity-70 transition duration-300"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+
+            {/* Logo */}
+            <span className="text-[28px] lg:text-[36px] text-[#2f3e2f]">
+              Lilac Template
+            </span>
+          </nav>
+        </Container>
+      </header>
+
+      {/* Overlay */}
+      <div
+        className={`
+          fixed inset-0 z-40 bg-[var(--color-bg-main)]
+          flex items-center justify-center
+          transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)]
+          ${isOpen ? "opacity-100 scale-100 visible" : "opacity-0 scale-95 invisible"}
+        `}
+      >
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-8 left-8 text-[#2f3e2f] text-3xl"
+        >
+          ✕
+        </button>
+
+        <div
+          className={`
+            flex flex-col gap-12 text-[40px] text-[#2f3e2f]
+            font-medium text-center
+            transition-all duration-500 delay-100
+            ${isOpen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}
+          `}
+        >
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className="hover:opacity-70 transition duration-300"
+            >
+              {item.label}
             </a>
-            <a href="#contact" className="hover:opacity-70 transition">
-              Contact
-            </a>
-          </div>
-        </nav>
-      </Container>
-    </header>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }

@@ -3,54 +3,105 @@ import Container from "@/components/ui/Container";
 
 const specialties = [
   {
-    title: "The Client",
+    title: "Self-Esteem",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
     image: "/images/ori-song-LPbKfdQJS2E-unsplash.webp",
   },
   {
-    title: "Self-love",
+    title: "Relationships",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
     image: "/images/valeriia-miller-5jR4rAMs5tk-unsplash+(1).webp",
   },
   {
-    title: "Art",
+    title: "Burnout",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
     image: "/images/milles-studio-GU-Q4-SQFTg-unsplash.webp",
   },
 ];
 
 export default function MySpecialties() {
   return (
-    <section className="bg-[var(--color-bg-main)] py-20 lg:py-28">
+    <section className="bg-[#e5e0da] bg-[var(--color-bg-main)] py-20 md:py-28 lg:py-36">
       <Container>
-        <h2 className="text-center text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-medium text-[#3d4a3d] mb-16">
+        {/* Section Heading */}
+        <h2 className="
+          text-center
+          text-[2rem]
+          sm:text-[2.3rem]
+          md:text-[3rem]
+          lg:text-[3.6rem]
+          font-medium
+          text-[#2f3e2f]
+          mb-16 md:mb-20 lg:mb-24
+        ">
           My Specialties
         </h2>
-        <div className="grid md:grid-cols-3 gap-10 lg:gap-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
           {specialties.map((item) => (
             <div
               key={item.title}
-              className="bg-white/60 border border-[#d4c5e0]/60 rounded-lg p-6 lg:p-8 flex flex-col"
+              className="
+              bg-[#e5e0da]
+                border border-[#2f3e2f]
+                px-6 py-8
+                sm:px-8 sm:py-10
+                lg:px-10 lg:py-12
+                flex flex-col
+                min-h-[520px]
+                md:min-h-[600px]
+                lg:min-h-[680px]
+              "
             >
-              <div className="relative w-24 h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden mb-6 mx-auto shrink-0">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="112px"
-                  className="object-cover"
-                  unoptimized
-                />
-              </div>
-              <h3 className="text-xl lg:text-2xl font-medium text-[#3d4a3d] mb-4 text-center">
+              <h3 className="
+                text-[1.1rem]
+                sm:text-[1.2rem]
+                lg:text-[1.4rem]
+                font-medium
+                text-[#2f3e2f]
+                mb-4 sm:mb-6
+              ">
                 {item.title}
               </h3>
-              <p className="text-[#5a6b5a]/90 leading-relaxed text-center flex-1">
+
+              <p className="
+                text-[#3f4f3f]
+                text-[15px]
+                sm:text-[16px]
+                leading-[1.8]
+                mb-8 sm:mb-10
+              ">
                 {item.description}
               </p>
+
+              {/* Circle Image */}
+              <div className="
+                relative
+                w-full
+                aspect-square
+                max-w-[260px]
+                sm:max-w-[300px]
+                lg:max-w-[380px]
+                mx-auto
+                mt-auto
+              ">
+                <div className="absolute inset-0 rounded-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 260px,
+                           (max-width: 1024px) 300px,
+                           380px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              </div>
+
             </div>
           ))}
         </div>
