@@ -1,14 +1,29 @@
+import Header from "@/components/layout/Header";
+import Hero from "@/components/sections/Hero";
+import FulfillingLife from "@/components/sections/FulfillingLife";
+import MySpecialties from "@/components/sections/MySpecialties";
+import NotAlone from "@/components/sections/NotAlone";
+import HiImLilac from "@/components/sections/HiImLilac";
+import FAQs from "@/components/sections/FAQs";
+import ProfessionalBackground from "@/components/sections/ProfessionalBackground";
+import FinalCTA from "@/components/sections/FinalCTA";
+import Footer from "@/components/sections/Footer";
+
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <main className="mx-auto max-w-2xl px-6 py-24 text-center">
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-          Grow My Therapy
-        </h1>
-        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-          Your journey starts here.
-        </p>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <FulfillingLife />
+        <MySpecialties />
+        <NotAlone />
+        <HiImLilac />
+        <FAQs />
+        <ProfessionalBackground />
+        <FinalCTA />
+        <Footer />
       </main>
-    </div>
+    </>
   );
 }

@@ -2,6 +2,14 @@
 
 html,
 body {
-  background-color: #ffffff;
+  background-color: #fbf6f1;
   color: #000000;
+}
+:root {
+  --container-padding: 1.5rem;
+  --color-bg-main: #fbf6f1;
+}
+
+body {
+  font-family: var(--font-gopher), sans-serif;
 }
