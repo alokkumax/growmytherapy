@@ -33,35 +33,45 @@ export default function Header() {
       >
         <Container>
           <nav className="h-[80px] flex items-center justify-between">
+            {/* Left Side */}
+            <div className="flex items-center">
+              {/* Desktop Logo */}
+              <span className="hidden lg:block text-[39px] text-[#2f3e2f]">
+                Lilac Template
+              </span>
 
-            {/* Burger */}
-            <button
-              onClick={() => setIsOpen(true)}
-              className={`lg:hidden flex flex-col gap-[6px] transition-opacity duration-300 ${
-                isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
-              }`}
-            >
-              <span className="w-6 h-[2px] bg-[#2f3e2f]" />
-              <span className="w-6 h-[2px] bg-[#2f3e2f]" />
-            </button>
-
-            {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-12 text-[18px] font-light text-[#2f3e2f]">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="hover:opacity-70 transition duration-300"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {/* Mobile Burger */}
+              <button
+                onClick={() => setIsOpen(true)}
+                className={`lg:hidden flex flex-col gap-[6px] transition-opacity duration-300 ${
+                  isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
+                }`}
+              >
+                <span className="w-6 h-[2px] bg-[#2f3e2f]" />
+                <span className="w-6 h-[2px] bg-[#2f3e2f]" />
+              </button>
             </div>
 
-            {/* Logo */}
-            <span className="text-[28px] lg:text-[36px] text-[#2f3e2f]">
-              Lilac Template
-            </span>
+            {/* Right Side */}
+            <div className="flex items-center">
+              {/* Desktop Nav */}
+              <div className="hidden lg:flex items-center gap-12 text-[20px] font-light text-[#2f3e2f]">
+                {navItems.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="hover:opacity-70 transition duration-300"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+
+              {/* Mobile Logo */}
+              <span className="lg:hidden text-[28px] text-[#2f3e2f]">
+                Lilac Template
+              </span>
+            </div>
           </nav>
         </Container>
       </header>
@@ -72,7 +82,11 @@ export default function Header() {
           fixed inset-0 z-40 bg-[var(--color-bg-main)]
           flex items-center justify-center
           transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)]
-          ${isOpen ? "opacity-100 scale-100 visible" : "opacity-0 scale-95 invisible"}
+          ${
+            isOpen
+              ? "opacity-100 scale-100 visible"
+              : "opacity-0 scale-95 invisible"
+          }
         `}
       >
         <button

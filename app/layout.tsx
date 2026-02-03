@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import AOSProvider from "@/components/providers/AOSProvider";
 
 const gopher = localFont({
   src: [
@@ -18,6 +19,11 @@ const gopher = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "./fonts/Gopher_Bold.otf",
+      weight: "900",
+      style: "normal",
+    },
   ],
   display: "swap",
 });
@@ -32,9 +38,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
       <body className={gopher.className}>
+        <AOSProvider/>
         {children}
       </body>
     </html>

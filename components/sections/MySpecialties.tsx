@@ -24,10 +24,13 @@ const specialties = [
 
 export default function MySpecialties() {
   return (
-    <section className="bg-[#e5e0da] bg-[var(--color-bg-main)] py-20 md:py-28 lg:py-36">
+    <section className=" bg-[var(--color-bg-main)] py-20 md:py-28 lg:py-36">
       <Container>
         {/* Section Heading */}
-        <h2 className="
+        <h2 
+        data-aos="fade-up"
+        // data-aos-delay="400"
+        className="
           text-center
           text-[2rem]
           sm:text-[2.3rem]
@@ -44,6 +47,8 @@ export default function MySpecialties() {
           {specialties.map((item) => (
             <div
               key={item.title}
+              data-aos="fade-up"
+              // data-aos-delay="400"
               className="
               bg-[#e5e0da]
                 border border-[#2f3e2f]
@@ -56,7 +61,11 @@ export default function MySpecialties() {
                 lg:min-h-[680px]
               "
             >
-              <h3 className="
+              <h3 
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="
+              
                 text-[1.1rem]
                 sm:text-[1.2rem]
                 lg:text-[1.4rem]
@@ -67,7 +76,10 @@ export default function MySpecialties() {
                 {item.title}
               </h3>
 
-              <p className="
+              <p 
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="
                 text-[#3f4f3f]
                 text-[15px]
                 sm:text-[16px]
@@ -78,7 +90,9 @@ export default function MySpecialties() {
               </p>
 
               {/* Circle Image */}
-              <div className="
+              <div
+              data-aos="fade-up"
+              data-aos-delay="400" className="
                 relative
                 w-full
                 aspect-square

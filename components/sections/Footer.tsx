@@ -3,68 +3,113 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-bg-main)] py-16 lg:py-20">
-      <Container>
-        <div className="grid md:grid-cols-3 gap-12 lg:gap-16 mb-12">
-          {/* Column 1: Logo & Contact */}
-          <div>
-            <h3 className="text-2xl font-medium text-[#3d4a3d] mb-4">
-              Lilac Template
-            </h3>
-            <p className="text-[#5a6b5a]/90 mb-2">123 Anywhere St.</p>
-            <p className="text-[#5a6b5a]/90 mb-2">hello@lilac.com</p>
-            <p className="text-[#5a6b5a]/90">123-456-7890</p>
-          </div>
+    <footer className="bg-[#e5e0da]">
 
-          {/* Column 2: Legal */}
-          <div>
-            <h3 className="text-lg font-medium text-[#3d4a3d] mb-4">Legal</h3>
-            <div className="flex flex-col gap-2">
-              <Link
-                href="#privacy"
-                className="text-[#5a6b5a]/90 hover:opacity-70 transition"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="#terms"
-                className="text-[#5a6b5a]/90 hover:opacity-70 transition"
-              >
-                Terms & Conditions
-              </Link>
-            </div>
-          </div>
+      {/* ================= TOP SECTION ================= */}
+      <div className="py-24">
+        <Container>
+          <div className="flex flex-col lg:flex-row justify-between gap-16">
 
-          {/* Column 3: Find / Social */}
-          <div>
-            <h3 className="text-lg font-medium text-[#3d4a3d] mb-4">Find</h3>
-            <div className="flex flex-col gap-2">
-              <Link
-                href="#instagram"
-                className="text-[#5a6b5a]/90 hover:opacity-70 transition"
-              >
-                Instagram
-              </Link>
-              <Link
-                href="#facebook"
-                className="text-[#5a6b5a]/90 hover:opacity-70 transition"
-              >
-                Facebook
-              </Link>
-              <Link
-                href="#pinterest"
-                className="text-[#5a6b5a]/90 hover:opacity-70 transition"
-              >
-                Pinterest
-              </Link>
+            {/* LEFT COLUMN */}
+            <div>
+              <h3 className="text-[2.8rem] font-medium text-[#2f3e2f] mb-8">
+                Lilac Template
+              </h3>
+
+              <p className="text-[18px] text-[#2f3e2f] leading-[1.8]">
+                123 Example Road
+                <br />
+                Minneapolis, MN
+              </p>
+
+              <div className="mt-8 space-y-3">
+                <a
+                  href="mailto:email@example.com"
+                  className="underline text-[#2f3e2f]"
+                >
+                  email@example.com
+                </a>
+                <br />
+                <a
+                  href="tel:5555555555"
+                  className="underline text-[#2f3e2f]"
+                >
+                  (555) 555-5555
+                </a>
+              </div>
             </div>
+
+            {/* RIGHT SIDE (Hours + Find grouped) */}
+            <div className="flex gap-24 lg:gap-32">
+
+              {/* HOURS */}
+              <div className="text-right">
+                <h4 className="text-[2rem] font-medium text-[#2f3e2f] mb-6">
+                  Hours
+                </h4>
+
+                <p className="text-[18px] text-[#2f3e2f] leading-[1.8]">
+                  Monday – Friday
+                  <br />
+                  10am – 6pm
+                </p>
+              </div>
+
+              {/* FIND */}
+              <div className="text-right">
+                <h4 className="text-[2rem] font-medium text-[#2f3e2f] mb-6">
+                  Find
+                </h4>
+
+                <div className="space-y-3 text-[18px]">
+                  <Link href="#" className="underline block">
+                    Home
+                  </Link>
+                  <Link href="#" className="underline block">
+                    Contact
+                  </Link>
+                  <Link href="#" className="underline block">
+                    Blog
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+
           </div>
+        </Container>
+      </div>
+
+
+      {/* ================= BOTTOM LEGAL STRIP ================= */}
+      <div className="bg-[#d9d4ce] py-16 text-center">
+
+        <div className="space-x-6 text-[15px] text-[#2f3e2f]">
+          <Link href="#" className="underline">
+            Privacy & Cookies Policy
+          </Link>
+          <Link href="#" className="underline">
+            Good Faith Estimate
+          </Link>
+          <Link href="#" className="underline">
+            Website Terms & Conditions
+          </Link>
+          <Link href="#" className="underline">
+            Disclaimer
+          </Link>
         </div>
 
-        <p className="text-center text-[#5a6b5a]/70 text-sm">
-          ©2023 Lilac Template. Powered by Squarespace.
+        <p className="mt-6 text-[15px] text-[#2f3e2f]">
+          Website Template Credits:{" "}
+          <span className="underline">Go Bloom Creative</span>
         </p>
-      </Container>
+
+        <p className="mt-10 text-[15px] text-[#2f3e2f]">
+          All Rights Reserved © 2024 Your Business Name Here, LLC.
+        </p>
+
+      </div>
+
     </footer>
   );
 }

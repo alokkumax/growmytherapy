@@ -3,10 +3,10 @@ import Container from "@/components/ui/Container";
 
 export default function NotAlone() {
   return (
-    <section className="bg-[#e5e0da]">
-      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-[720px]">
+    <section className="bg-[#c2bfcb]">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-[950px]">
         {/* Image */}
-        <div
+        <div data-aos="fade-up"
           className="
     relative
     w-full
@@ -30,10 +30,10 @@ export default function NotAlone() {
         </div>
 
         {/* Content Side */}
-        <div className="flex flex-col bg-[#b8a9c9] order-2">
+        <div className="flex flex-col bg-[#c2bfcb] order-2">
           <div className="py-20 lg:py-24 flex-1 flex items-center">
-            <Container className="max-w-[720px] w-full">
-              <h2
+            <Container  className="max-w-[720px] w-full">
+              <h2 data-aos="fade-up"
                 className="
                 text-[2.6rem]
                 md:text-[3.2rem]
@@ -48,11 +48,11 @@ export default function NotAlone() {
                 <span className="italic">alone.</span>
               </h2>
 
-              <p className="text-[18px] text-[#2f3e2f] mb-8">
+              <p data-aos="fade-up" className="text-[18px] text-[#2f3e2f] mb-8">
                 If you are facing any of these, there’s hope:
               </p>
 
-              <ul className="space-y-4 text-[17px] text-[#2f3e2f] leading-[1.8] mb-12 list-disc pl-6">
+              <ul data-aos="fade-up" className="space-y-4 text-[17px] text-[#2f3e2f] leading-[1.8] mb-12 list-disc pl-6">
                 <li>Persistent feelings of sadness or hopelessness</li>
                 <li>Trouble focusing or making decisions</li>
                 <li>Difficulty maintaining relationships</li>
@@ -60,7 +60,7 @@ export default function NotAlone() {
                 <li>A pervasive sense of being overwhelmed</li>
               </ul>
 
-              <p className="text-[17px] text-[#2f3e2f] leading-[1.8]">
+              <p data-aos="fade-up" className="text-[17px] text-[#2f3e2f] leading-[1.8]">
                 With empathy and guidance, we'll work together to navigate the
                 challenges life throws your way.
               </p>
@@ -68,7 +68,10 @@ export default function NotAlone() {
           </div>
 
           {/* Bottom CTA Strip */}
-          <div className="border-t border-[#2f3e2f]/40">
+          <div
+          data-aos="fade-up"
+            data-aos-delay="200"
+          className="border-t border-[#2f3e2f]/40">
             <div
               className="
                 group
@@ -93,7 +96,7 @@ export default function NotAlone() {
                     group-hover:text-white
                   "
                 >
-                  GET STARTED →
+                  WORK WITH ME →
                 </span>
               </div>
             </div>

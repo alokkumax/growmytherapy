@@ -5,18 +5,20 @@ type Props = {
   children: React.ReactNode;
   showArrow?: boolean;
   className?: string;
-};
+} & React.ComponentPropsWithoutRef<"a">; // 👈 allow all anchor props
 
 export default function Button({
   href,
   children,
   showArrow = true,
   className = "",
+  ...props // 👈 capture extra props like data-aos
 }: Props) {
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--color-bg-main)] border-1 border-[#3d4a3d] text-[#3d4a3d] font-medium text-lg hover:bg-[#3d4a3d] hover:text-white transition-colors duration-500 ${className}`}
+      className={`group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--color-bg-main)] border border-[#3d4a3d] text-[#3d4a3d] font-medium text-lg hover:bg-[#3d4a3d] hover:text-white transition-colors duration-500 ${className}`}
+      {...props} // 👈 forward them here
     >
       {children}
       {showArrow && (

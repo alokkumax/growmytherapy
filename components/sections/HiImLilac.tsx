@@ -3,60 +3,102 @@ import Container from "@/components/ui/Container";
 
 export default function HiImLilac() {
   return (
-    <section className="bg-[var(--color-bg-main)]">
-      <div className="grid lg:grid-cols-2 min-h-0">
-        {/* Left: Text content */}
-        <div className="flex items-center justify-center lg:justify-end py-16 lg:py-24">
-          <Container className="max-w-xl">
-            <h2 className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] leading-tight font-medium text-[#3d4a3d] mb-6">
-              Hi, I&apos;m Lilac.
-            </h2>
-            <p className="text-lg text-[#5a6b5a]/90 leading-relaxed mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla.
-            </p>
-            <p className="text-lg text-[#5a6b5a]/90 leading-relaxed mb-8">
-              Ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
-              cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus interdum
-              posuere.
-            </p>
-            <p className="text-2xl font-light text-[#3d4a3d] italic">
-              — Lilac
-            </p>
-          </Container>
-        </div>
+    <section className="bg-[#e5e0da] py-20 sm:py-24 lg:py-32">
 
-        {/* Right: Images - bouquet with overlapping circular */}
-        <div className="relative flex items-center justify-center lg:justify-start py-16 lg:py-24 min-h-[400px]">
-          <div className="relative w-full max-w-[400px] lg:max-w-[450px] aspect-[4/5]">
-            {/* Main arched image */}
+      <div className="px-5 sm:px-8 lg:px-12 xl:px-20">
+        <Container>
+
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-14 lg:gap-24">
+
+            {/* ================= CONTENT FIRST (MOBILE) ================= */}
             <div
-              className="absolute inset-0 overflow-hidden border border-[#d4c5e0]/60"
-              style={{ borderRadius: "50% 50% 0 0" }}
+              data-aos="fade-up"
+              className="order-1 lg:order-1 max-w-[760px] text-center lg:text-left"
             >
-              <Image
-                src="/images/lilac+template+white+lilac.webp"
-                alt="Bouquet of purple lilac flowers"
-                fill
-                sizes="(max-width: 1024px) 100vw, 450px"
-                className="object-cover object-center"
-                unoptimized
-              />
+              <h2 className="text-[2.4rem] sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.8rem] leading-[1.1] font-medium text-[#2f3e2f] mb-6 sm:mb-8">
+                Hi, I’m Lilac.
+              </h2>
+
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] leading-[1.8] text-[#2f3e2f] mb-8 sm:mb-10">
+                I'm committed to providing a safe and supportive environment where we
+                can explore your thoughts, feelings, and behaviors. With empathy and
+                guidance, we'll work together to navigate the challenges life throws
+                your way.
+              </p>
+
+              <button className="group px-7 sm:px-8 py-3 sm:py-4 border border-[#2f3e2f] text-[#2f3e2f] text-[13px] sm:text-[14px] tracking-[0.18em] font-medium hover:bg-[#2f3e2f] hover:text-white transition-all duration-500">
+                LET’S CHAT →
+              </button>
             </div>
-            {/* Overlapping circular image */}
-            <div className="absolute -bottom-8 -right-4 lg:right-8 w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-[var(--color-bg-main)] shadow-lg z-10">
-              <Image
-                src="/images/daiga-ellaby-Ct6LBZHaOSc-unsplash.webp"
-                alt="White fluffy flowers"
-                fill
-                sizes="160px"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
+
+
+            {/* ================= IMAGE BELOW (MOBILE) ================= */}
+            {/* IMAGE SECTION */}
+<div data-aos="fade-up" className="order-2 lg:order-2 w-full flex justify-center xl:justify-center mt-10 lg:mt-0">
+
+<div
+ className="
+ relative
+ w-[55%]
+ sm:w-[35%]
+ md:w-[30%]
+ lg:w-[80%]
+ xl:w-[75%]
+ max-w-[500px]
+"
+
+>
+  {/* MAIN ARCH IMAGE */}
+  <div
+    className="relative overflow-hidden"
+    style={{
+      borderTopLeftRadius: "400px",
+      borderTopRightRadius: "400px",
+    }}
+  >
+    <Image
+      src="/images/lilac+template+white+lilac.webp"
+      alt="Lilac bouquet portrait"
+      width={800}
+      height={1000}
+      priority
+      className="w-full h-auto object-cover object-top"
+      unoptimized
+    />
+  </div>
+
+  {/* CIRCULAR IMAGE */}
+  <div data-aos="fade-up"
+    className="
+      absolute
+      -bottom-6 sm:-bottom-10 lg:-bottom-20
+      -right-4 sm:-right-8 lg:-right-24
+      w-[110px] h-[110px]
+      sm:w-[160px] sm:h-[160px]
+      md:w-[190px] md:h-[190px]
+      lg:w-[280px] lg:h-[280px]
+      rounded-full
+      overflow-hidden
+      border-4 border-[#e5e0da]
+      shadow-md
+    "
+  >
+    <Image
+      src="/images/daiga-ellaby-Ct6LBZHaOSc-unsplash.webp"
+      alt="White flowers detail"
+      fill
+      sizes="(max-width:768px) 160px, 280px"
+      className="object-cover"
+      unoptimized
+    />
+  </div>
+
+</div>
+</div>
+
           </div>
-        </div>
+
+        </Container>
       </div>
     </section>
   );
