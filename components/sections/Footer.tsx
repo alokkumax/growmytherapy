@@ -82,7 +82,7 @@ export default function Footer() {
 
 
       {/* ================= BOTTOM LEGAL STRIP ================= */}
-      <div className="bg-[#d9d4ce] py-16 text-center">
+      <div className="bg-[var(--color-bg-soft)] py-16 text-center">
 
         <div className="space-x-6 text-[15px] text-[#2f3e2f]">
           <Link href="#" className="underline">

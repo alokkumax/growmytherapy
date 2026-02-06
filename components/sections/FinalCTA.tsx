@@ -3,13 +3,12 @@ import Button from "../ui/Button";
 
 export default function FinalCTA() {
   return (
-    <section id="contact" className="bg-[var(--color-accent)] py-24 md:py-28 lg:py-36">
-
+    <section
+      id="contact"
+      className="bg-[var(--color-accent)] py-24 md:py-28 lg:py-36"
+    >
       <Container>
-        <div
-          data-aos="fade-up"
-          className="max-w-[720px] mx-auto text-center"
-        >
+        <div data-aos="fade-up" className="max-w-[720px] mx-auto text-center">
           {/* Title */}
           <h2
             data-aos="fade-up"
@@ -26,7 +25,6 @@ export default function FinalCTA() {
             "
           >
             Get Started with Anxiety & Trauma Therapy
-
           </h2>
 
           {/* Description */}
@@ -45,18 +43,14 @@ export default function FinalCTA() {
             "
           >
             If you're ready to feel more grounded, resilient, and in control,
-let’s begin your therapy journey in Santa Monica.
-
+            let’s begin your therapy journey in Santa Monica.
           </p>
 
           {/* Button */}
-          <div
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-           <Button
-  href="#contact"
-  className="
+          <div data-aos="fade-up" data-aos-delay="300">
+            <Button
+              href="#contact"
+              className="
     px-10
     py-4
     border
@@ -71,14 +65,12 @@ let’s begin your therapy journey in Santa Monica.
     hover:!bg-white
     hover:!text-black/50
   "
->
-  GET IN TOUCH 
-</Button>
-
+            >
+              GET IN TOUCH
+            </Button>
           </div>
         </div>
       </Container>
-
     </section>
   );
 }
