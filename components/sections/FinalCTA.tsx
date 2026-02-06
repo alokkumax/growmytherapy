@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function FinalCTA() {
   return (
-    <section className="bg-[#7e7b3d] py-24 md:py-28 lg:py-36">
+    <section id="contact" className="bg-[var(--color-accent)] py-24 md:py-28 lg:py-36">
 
       <Container>
         <div
@@ -25,7 +25,8 @@ export default function FinalCTA() {
               mb-8
             "
           >
-            Get started today.
+            Get Started with Anxiety & Trauma Therapy
+
           </h2>
 
           {/* Description */}
@@ -43,10 +44,9 @@ export default function FinalCTA() {
               mx-auto
             "
           >
-            Ready to take the first step towards a happier, healthier you?
-            <br className="hidden sm:block" />
-            Contact me to book your first session. I look forward to starting
-            this therapeutic journey with you.
+            If you're ready to feel more grounded, resilient, and in control,
+let’s begin your therapy journey in Santa Monica.
+
           </p>
 
           {/* Button */}
@@ -69,7 +69,7 @@ export default function FinalCTA() {
     transition-all
     duration-500
     hover:!bg-white
-    hover:!text-[#7e7b3d]
+    hover:!text-black/50
   "
 >
   GET IN TOUCH 

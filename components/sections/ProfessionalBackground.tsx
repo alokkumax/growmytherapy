@@ -7,31 +7,32 @@ const sections = [
   {
     title: "Education",
     content:
-      "Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia false artemesia moccuella gladiolus cirisum trollius anthurium prunus delphinium achillea.",
+      "Dr. Maya Reynolds earned her Doctorate in Clinical Psychology (PsyD) and has extensive training in anxiety disorders, trauma recovery, and burnout prevention. Her academic background emphasizes evidence-based and trauma-informed care.",
   },
   {
     title: "Licensure",
     content:
-      "Details about professional licenses and credentials would go here.",
+      "Dr. Reynolds is a licensed clinical psychologist practicing in Santa Monica, California. She provides therapy services for adults navigating anxiety, trauma, and major life transitions.",
   },
   {
-    title: "Certifications",
+    title: "Specialized Training",
     content:
-      "Relevant certifications, advanced training, and continued education.",
+      "She has advanced training in Cognitive Behavioral Therapy (CBT) and trauma-informed interventions. Her work integrates research-backed techniques with compassionate, client-centered care.",
   },
 ];
+
 
 export default function ProfessionalBackground() {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // first open like target
 
   return (
-    <section className="bg-[#e5e0da] py-20 lg:py-28">
+    <section className="bg-[var(--color-bg-soft)] py-20 lg:py-28">
       <Container>
 
         {/* Heading */}
         <h2
           data-aos="fade-up"
-          className="text-center text-[2.6rem] md:text-[3.2rem] lg:text-[3.6rem] leading-[1.1] font-medium text-[#2f3e2f] mb-16"
+          className="text-center text-[2.6rem] md:text-[3.2rem] lg:text-[3.6rem] leading-[1.1] font-medium text-[var(--color-text-main)] mb-16"
         >
           My Professional Background
         </h2>
@@ -51,7 +52,7 @@ export default function ProfessionalBackground() {
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between py-6 text-left"
                 >
-                  <span className="text-[1.6rem] md:text-[1.8rem] font-medium text-[#2f3e2f]">
+                  <span className="text-[1.6rem] md:text-[1.8rem] font-medium text-[var(--color-text-main)]">
                     {section.title}
                   </span>
 
@@ -72,7 +73,7 @@ export default function ProfessionalBackground() {
   `}
 >
   <div className="pt-6 pb-10 pl-8 md:pl-16 lg:pl-20 max-w-[720px]">
-    <p className="text-[17px] md:text-[18px] leading-[1.9] text-[#2f3e2f]">
+    <p className="text-[17px] md:text-[18px] leading-[1.9] text-[var(--color-text-light)]">
       {section.content}
     </p>
   </div>

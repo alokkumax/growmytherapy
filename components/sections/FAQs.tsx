@@ -6,19 +6,19 @@ import Container from "@/components/ui/Container";
 
 const faqs = [
   {
-    question: "Do you take insurance?",
+    question: "Do you offer therapy for anxiety and trauma in Santa Monica?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Yes. I specialize in evidence-based therapy for anxiety, trauma, and burnout in Santa Monica. I work with adults who feel overwhelmed, stuck, or emotionally exhausted, and we tailor treatment to your specific needs.",
   },
   {
-    question: "What are your rates?",
+    question: "What therapy approaches do you use?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "My work is grounded in evidence-based modalities including Cognitive Behavioral Therapy (CBT) and trauma-informed approaches. Therapy is collaborative, practical, and focused on helping you build long-term resilience and emotional clarity.",
   },
   {
-    question: "Do you have any openings?",
+    question: "Do you offer in-person or virtual sessions?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "I offer therapy sessions for adults in Santa Monica, with options for both in-person and secure virtual appointments. We’ll determine what works best for your schedule and comfort.",
   },
 ];
 
@@ -26,18 +26,17 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-[var(--color-bg-main)] py-24 lg:py-32">
+    <section id="faqs" className="bg-[var(--color-bg-main)] py-24 lg:py-32">
       <Container>
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-16 lg:gap-24">
-
           {/* ================= IMAGE ================= */}
           {/* LEFT IMAGE */}
-<div
-  data-aos="fade-up"
-  className="w-full flex justify-center xl:justify-center mb-10 lg:mb-0 order-2 lg:order-1"
->
-  <div
-   className="
+          <div
+            data-aos="fade-up"
+            className="w-full flex justify-center xl:justify-center mb-10 lg:mb-0 order-2 lg:order-1"
+          >
+            <div
+              className="
    relative
    w-[55%]
    sm:w-[35%]
@@ -46,28 +45,26 @@ export default function FAQs() {
    xl:w-[75%]
    max-w-[500px]
  "
- 
-  >
-    <div
-      className="relative overflow-hidden"
-      style={{
-        borderTopLeftRadius: "400px",
-        borderTopRightRadius: "400px",
-      }}
-    >
-      <Image
-        src="/images/myxa69-APKZU4NJcgs-unsplash.webp"
-        alt="Dried purple plants"
-        width={800}
-        height={1000}
-        priority
-        className="w-full h-auto object-cover object-top"
-        unoptimized
-      />
-    </div>
-  </div>
-</div>
-
+            >
+              <div
+                className="relative overflow-hidden"
+                style={{
+                  borderTopLeftRadius: "400px",
+                  borderTopRightRadius: "400px",
+                }}
+              >
+                <Image
+                  src="/images/myxa69-APKZU4NJcgs-unsplash.webp"
+                  alt="Dried purple plants"
+                  width={800}
+                  height={1000}
+                  priority
+                  className="w-full h-auto object-cover object-top"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
 
           {/* ================= FAQ CONTENT ================= */}
           <div
@@ -75,12 +72,11 @@ export default function FAQs() {
             data-aos-delay="150"
             className="order-1 lg:order-2 w-full"
           >
-            <h2 className="text-[2.8rem] md:text-[3.4rem] lg:text-[3.8rem] leading-[1.1] font-medium text-[#2f3e2f] mb-12 text-center lg:text-left">
+            <h2 className="text-[2.8rem] md:text-[3.4rem] lg:text-[3.8rem] leading-[1.1] font-medium text-[var(--color-text-main)] mb-12 text-center lg:text-left">
               FAQs
             </h2>
 
             <div className="border-t border-[#2f3e2f]/40">
-
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
 
@@ -90,9 +86,7 @@ export default function FAQs() {
                     className="border-b border-[#2f3e2f]/40"
                   >
                     <button
-                      onClick={() =>
-                        setOpenIndex(isOpen ? null : index)
-                      }
+                      onClick={() => setOpenIndex(isOpen ? null : index)}
                       className="w-full flex items-center gap-6 py-8 text-left"
                     >
                       {/* Plus Icon */}
@@ -114,10 +108,12 @@ export default function FAQs() {
                     {/* Answer */}
                     <div
                       className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isOpen ? "max-h-40 opacity-100 pb-8" : "max-h-0 opacity-0"
+                        isOpen
+                          ? "max-h-40 opacity-100 pb-8"
+                          : "max-h-0 opacity-0"
                       }`}
                     >
-                      <p className="text-[18px] leading-[1.8] text-[#2f3e2f] pl-11">
+                      <p className="text-[18px] leading-[1.8] text-[var(--color-text-light)] pl-11">
                         {faq.answer}
                       </p>
                     </div>
@@ -126,7 +122,6 @@ export default function FAQs() {
               })}
             </div>
           </div>
-
         </div>
       </Container>
     </section>

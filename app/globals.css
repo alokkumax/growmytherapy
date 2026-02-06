@@ -1,22 +1,64 @@
 @import "tailwindcss";
 
-html,
-body {
-  background-color: #fbf6f1;
-  color: #000000;
-}
+/* =========================
+   ROOT THEME (Dr. Maya)
+   ========================= */
+
 :root {
   --container-padding: 1.5rem;
-  --color-bg-main: #fbf6f1;
+
+  /* Backgrounds */
+  --color-bg-main: #f7f8f6;   /* warm neutral */
+  --color-bg-soft: #cccccc;   /* soft section */
+  --color-bg-accent: #4E6258; /* dark sage section */
+
+  /* Text */
+  --color-text-main: #3F4B45; 
+  --color-text-light: #6B746F;
+  --color-text-white: #FFFFFF;
+
+  /* Primary brand */
+  --color-primary: #4E6258;   
+  --color-accent: #8DA3AA;    
+
+  /* Borders */
+  --color-border: #CFCBC3;
 }
 
 body {
-  font-family: var(--font-gopher), sans-serif;
+  font-family: var(--font-body), sans-serif;
+  background-color: #F2EFEA;
+  color: #1f2d2a;
+  scroll-behavior: smooth;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* =========================
+   BASE
+   ========================= */
+
+html,
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* =========================
+   SIMPLE FADE UP
+   ========================= */
+
 .fade-up {
   opacity: 0;
   animation: fadeUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -27,5 +69,3 @@ body {
     transform: translateY(0);
   }
 }
-
-

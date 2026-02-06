@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 
 export default function HiImLilac() {
   return (
-    <section className="bg-[#e5e0da] py-20 sm:py-24 lg:py-32">
+    <section  id="about" className="bg-[var(--color-bg-soft)] py-20 sm:py-24 lg:py-32">
 
       <div className="px-5 sm:px-8 lg:px-12 xl:px-20">
         <Container>
@@ -15,19 +15,34 @@ export default function HiImLilac() {
               data-aos="fade-up"
               className="order-1 lg:order-1 max-w-[760px] text-center lg:text-left"
             >
-              <h2 className="text-[2.4rem] sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.8rem] leading-[1.1] font-medium text-[#2f3e2f] mb-6 sm:mb-8">
-                Hi, I’m Lilac.
-              </h2>
+              <h2 className="text-[2.4rem] sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.8rem] leading-[1.1] font-medium text-[var(--color-text-main)] mb-6 sm:mb-8">
+  Hi, I’m Dr. Maya Reynolds.
+</h2>
 
-              <p className="text-[16px] sm:text-[17px] md:text-[18px] leading-[1.8] text-[#2f3e2f] mb-8 sm:mb-10">
-                I'm committed to providing a safe and supportive environment where we
-                can explore your thoughts, feelings, and behaviors. With empathy and
-                guidance, we'll work together to navigate the challenges life throws
-                your way.
-              </p>
 
-              <button className="group px-7 sm:px-8 py-3 sm:py-4 border border-[#2f3e2f] text-[#2f3e2f] text-[13px] sm:text-[14px] tracking-[0.18em] font-medium hover:bg-[#2f3e2f] hover:text-white transition-all duration-500">
-                LET’S CHAT →
+<p className="text-[16px] sm:text-[17px] md:text-[18px] leading-[1.8] text-[var(--color-text-light)] mb-8 sm:mb-10">
+  I’m a licensed clinical psychologist based in Santa Monica, specializing in anxiety, trauma, and burnout. My work is grounded in evidence-based practices, including cognitive behavioral therapy and trauma-informed approaches. I provide a structured yet compassionate space where adults can explore patterns, process difficult experiences, and develop practical tools for lasting change.
+</p>
+
+
+              <button className="text-[13px]
+                sm:text-[14px]
+                px-7
+                py-3
+                border
+                border-[var(--color-primary)]
+                bg-transparent
+                text-[var(--color-primary)]
+                tracking-[0.15em]
+                font-medium
+                hover:bg-[var(--color-primary)]
+                hover:text-white
+                transition-all
+                duration-700
+                hover:cursor-pointer
+                ">
+              LET’S WORK TOGETHER →
+
               </button>
             </div>
 
@@ -57,7 +72,7 @@ export default function HiImLilac() {
     }}
   >
     <Image
-      src="/images/lilac+template+white+lilac.webp"
+      src="/images/therapist-hero.png"
       alt="Lilac bouquet portrait"
       width={800}
       height={1000}
@@ -84,7 +99,7 @@ export default function HiImLilac() {
     "
   >
     <Image
-      src="/images/daiga-ellaby-Ct6LBZHaOSc-unsplash.webp"
+      src="/images/office1.jpeg"
       alt="White flowers detail"
       fill
       sizes="(max-width:768px) 160px, 280px"

@@ -3,29 +3,18 @@ import "./globals.css";
 import localFont from "next/font/local";
 import AOSProvider from "@/components/providers/AOSProvider";
 
-const gopher = localFont({
-  src: [
-    {
-      path: "./fonts/Gopher_Light.otf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Gopher_Medium.otf",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Gopher_Regular.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Gopher_Bold.otf",
-      weight: "900",
-      style: "normal",
-    },
-  ],
-  display: "swap",
+import { Montserrat, Inter } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-heading",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +30,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={gopher.className}>
+      <body  className={`${montserrat.variable} ${inter.variable}`}>
         <AOSProvider/>
         {children}
       </body>

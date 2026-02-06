@@ -3,28 +3,29 @@ import Container from "@/components/ui/Container";
 
 const specialties = [
   {
-    title: "Self-Esteem",
+    title: "Anxiety Therapy",
     description:
-      "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
-    image: "/images/ori-song-LPbKfdQJS2E-unsplash.webp",
+      "Individual therapy in Santa Monica focused on helping adults manage chronic anxiety, racing thoughts, perfectionism, and high-functioning stress using evidence-based approaches such as CBT and mindfulness-based interventions.",
+    image: "/images/1special.webp",
   },
   {
-    title: "Relationships",
+    title: "Trauma & PTSD Treatment",
     description:
-      "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
-    image: "/images/valeriia-miller-5jR4rAMs5tk-unsplash+(1).webp",
+      "Trauma-informed therapy designed to help you process unresolved experiences, regulate emotional responses, and rebuild a sense of safety and stability using research-supported methods.",
+    image: "/images/2special.avif",
   },
   {
-    title: "Burnout",
+    title: "Burnout & Life Transitions",
     description:
-      "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
-    image: "/images/milles-studio-GU-Q4-SQFTg-unsplash.webp",
+      "Support for professionals experiencing burnout, career overwhelm, or major life transitions. Therapy focuses on resilience-building, boundary setting, and restoring emotional balance.",
+    image: "/images/3special.jpeg",
   },
 ];
 
+
 export default function MySpecialties() {
   return (
-    <section className=" bg-[var(--color-bg-main)] py-20 md:py-28 lg:py-36">
+    <section id="services" className=" bg-[var(--color-bg-main)] py-20 md:py-28 lg:py-36">
       <Container>
         {/* Section Heading */}
         <h2 
@@ -40,7 +41,8 @@ export default function MySpecialties() {
           text-[#2f3e2f]
           mb-16 md:mb-20 lg:mb-24
         ">
-          My Specialties
+          Areas of Focus
+
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
@@ -50,7 +52,7 @@ export default function MySpecialties() {
               data-aos="fade-up"
               // data-aos-delay="400"
               className="
-              bg-[#e5e0da]
+              bg-[var(--color-bg-soft)]
                 border border-[#2f3e2f]
                 px-6 py-8
                 sm:px-8 sm:py-10

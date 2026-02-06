@@ -3,7 +3,7 @@ import Container from "@/components/ui/Container";
 
 export default function FulfillingLife() {
   return (
-    <section className="bg-[#e5e0da]">
+    <section className="bg-[var(--color-bg-soft)]">
       <div className="flex flex-col lg:grid lg:grid-cols-2 lg:min-h-[720px]">
         {/* Image (Top on Mobile) */}
         <div
@@ -11,7 +11,7 @@ export default function FulfillingLife() {
           className="relative w-full aspect-[4/3] lg:aspect-auto lg:min-h-full order-1 lg:order-2"
         >
           <Image
-            src="/images/tanya-trukyr-ornZV1YJNNo-unsplash.webp"
+            src="/images/fullfiling.jpg"
             alt="Flat-lay of lilac flowers, coffee mug, journal and lifestyle items"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -35,19 +35,18 @@ export default function FulfillingLife() {
       mb-8
     "
   >
-    Live a fulfilling life.
+    You Don’t Have to Navigate This Alone
   </h2>
 
   <p className="text-[18px] text-[#2f3e2f] leading-[1.8] mb-8">
-    Life can be challenging—especially when you're trying to balance
-    your personal and professional life.
+    Many high-achieving adults silently carry anxiety, unresolved trauma, or chronic burnout while continuing to meet expectations at work and in their personal lives. Over time, this pressure can feel overwhelming.
   </p>
 
   <p className="text-[18px] text-[#2f3e2f] leading-[1.8]">
-    It's easy to feel like you're alone in facing these challenges,
-    but I want you to know that I'm here to help.
+    Dr. Maya Reynolds provides evidence-based therapy in Santa Monica designed to help you better understand your patterns, regulate emotional responses, and build resilience—so you can move forward with greater clarity and confidence.
   </p>
 </Container>
+
 
           </div>
 

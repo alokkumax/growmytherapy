@@ -13,63 +13,63 @@ export default function Footer() {
             {/* LEFT COLUMN */}
             <div>
               <h3 className="text-[2.8rem] font-medium text-[#2f3e2f] mb-8">
-                Lilac Template
+                Dr. Maya Reynolds, PsyD
               </h3>
 
               <p className="text-[18px] text-[#2f3e2f] leading-[1.8]">
-                123 Example Road
+                Santa Monica, California
                 <br />
-                Minneapolis, MN
+                Anxiety & Trauma Therapy for Adults
               </p>
 
               <div className="mt-8 space-y-3">
                 <a
-                  href="mailto:email@example.com"
+                  href="mailto:info@mayareynoldspsyd.com"
                   className="underline text-[#2f3e2f]"
                 >
-                  email@example.com
+                  info@mayareynoldspsyd.com
                 </a>
                 <br />
                 <a
-                  href="tel:5555555555"
+                  href="tel:3100000000"
                   className="underline text-[#2f3e2f]"
                 >
-                  (555) 555-5555
+                  (310) 000-0000
                 </a>
               </div>
             </div>
 
-            {/* RIGHT SIDE (Hours + Find grouped) */}
+            {/* RIGHT SIDE */}
             <div className="flex gap-24 lg:gap-32">
 
               {/* HOURS */}
               <div className="text-right">
                 <h4 className="text-[2rem] font-medium text-[#2f3e2f] mb-6">
-                  Hours
+                  Office Hours
                 </h4>
 
                 <p className="text-[18px] text-[#2f3e2f] leading-[1.8]">
                   Monday – Friday
                   <br />
-                  10am – 6pm
+                  By Appointment Only
                 </p>
               </div>
 
-              {/* FIND */}
+              {/* NAVIGATION */}
               <div className="text-right">
                 <h4 className="text-[2rem] font-medium text-[#2f3e2f] mb-6">
-                  Find
+                  Explore
                 </h4>
 
                 <div className="space-y-3 text-[18px]">
-                  <Link href="#" className="underline block">
-                    Home
+                  <Link href="#about" className="underline block">
+                    About
                   </Link>
-                  <Link href="#" className="underline block">
+                  <Link href="#services" className="underline block">
+                    Services
+                  </Link>
+                  <Link href="#contact" className="underline block">
                     Contact
-                  </Link>
-                  <Link href="#" className="underline block">
-                    Blog
                   </Link>
                 </div>
               </div>
@@ -86,26 +86,21 @@ export default function Footer() {
 
         <div className="space-x-6 text-[15px] text-[#2f3e2f]">
           <Link href="#" className="underline">
-            Privacy & Cookies Policy
+            Privacy Policy
           </Link>
           <Link href="#" className="underline">
             Good Faith Estimate
           </Link>
           <Link href="#" className="underline">
-            Website Terms & Conditions
+            Terms & Conditions
           </Link>
           <Link href="#" className="underline">
             Disclaimer
           </Link>
         </div>
 
-        <p className="mt-6 text-[15px] text-[#2f3e2f]">
-          Website Template Credits:{" "}
-          <span className="underline">Go Bloom Creative</span>
-        </p>
-
         <p className="mt-10 text-[15px] text-[#2f3e2f]">
-          All Rights Reserved © 2024 Your Business Name Here, LLC.
+          © {new Date().getFullYear()} Dr. Maya Reynolds, PsyD. All Rights Reserved.
         </p>
 
       </div>
