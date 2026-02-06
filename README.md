@@ -1,37 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌿 Dr. Maya Reynolds — Therapy Website Redesign
 
-## Getting Started
+This project is a complete redesign of a therapy homepage based on the professional profile of Dr. Maya Reynolds, PsyD.
 
-First, run the development server:
+The goal was to transform the original lilac-themed template into a cohesive, grounded, and professional therapy website aligned with her specialties, tone, and location.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Link Final [ Stage 4 ] - https://growmytherapy-final.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Link [ Stage 1 ] - https://growmytherapy-snowy.vercel.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📌 Project Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The website was redesigned using Dr. Maya Reynolds’ profile as the single source of truth for:
 
-## Learn More
+Specialties (Anxiety, Trauma, Burnout)
 
-To learn more about Next.js, take a look at the following resources:
+Treatment approach (Evidence-based, CBT, trauma-informed)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Client population (Adults)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Location (Santa Monica)
 
-## Deploy on Vercel
+Practice format (In-person and virtual sessions)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All homepage copy, services, FAQs, and supporting sections were rewritten to reflect this information accurately and naturally.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# growmytherapy
+🎨 Design Direction
+New Theme & Visual Identity
+
+The original lilac palette was fully replaced with a grounded, coastal-inspired color system:
+
+Primary: Deep Sage Green
+
+Secondary: Warm Sand / Soft Ivory
+
+Accent: Muted Coastal Blue
+
+The goal was to create a tone that feels:
+
+Calm
+
+Professional
+
+Trustworthy
+
+Coastal yet grounded (aligned with Santa Monica)
+
+Typography was updated to reflect a clean, minimal, psychologist-appropriate aesthetic.
+
+All components (text, buttons, sections, images, UI elements) use the new palette consistently.
+
+✍️ Copywriting & SEO
+
+All website copy was derived directly from Dr. Maya Reynolds’ profile.
+
+SEO considerations include:
+
+Location-specific keywords (Santa Monica therapy)
+
+Specialty keywords (Anxiety therapy, Trauma therapy, Burnout support)
+
+Natural keyword integration in headings and body text
+
+Clear H1 structure for search visibility
+
+Sections rewritten include:
+
+Hero
+
+Services (3 core services selected from profile)
+
+About
+
+FAQs
+
+Professional Background
+
+Final CTA
+
+Footer
+
+🏢 Custom Section (Part 3)
+
+A new “Our Office” section was added to the homepage.
+
+This section:
+
+Highlights the Santa Monica practice space
+
+Emphasizes privacy, comfort, and safety
+
+Integrates seamlessly with the design system
+
+Includes intentional imagery aligned with the therapy setting
+
+This section did not exist in the original template.
+
+📱 Responsiveness
+
+The site is fully responsive:
+
+Desktop layout maintains spacious balance and readability.
+
+Mobile layout stacks content intentionally for clarity.
+
+Navigation adapts to a clean overlay menu on smaller screens.
+
+Images scale proportionally across breakpoints.
+
+⚙️ Tech Stack
+
+Next.js (App Router)
+
+Tailwind CSS
+
+Responsive layout system
+
+AOS (Animate on Scroll) for subtle motion
+
+Modular component architecture
+
+🎯 Goals Achieved
+
+✔ Complete theme replacement
+✔ New cohesive color system
+✔ Updated typography
+✔ Profile-based copywriting
+✔ SEO integration
+✔ Fully responsive design
+✔ New custom section added
+✔ Consistent visual language across all sections
+
+📌 Final Notes
+
+This project focuses not just on technical execution, but on:
+
+Design sensitivity
+
+Copy accuracy
+
+Client psychology
+
+Visual coherence
+
+Trust-building communication
+
+The final result reflects a calm, grounded, and professional therapy brand aligned with Dr. Maya Reynolds’ profile.
